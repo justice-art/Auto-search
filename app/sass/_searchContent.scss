@@ -1,0 +1,89 @@
+  
+  .search-content {
+    padding: 8px;
+    .previews-result {
+      margin-top: 2px;
+      .item-preview {
+        display: flex;
+        width: 50%;
+        flex-direction: row;
+        position: relative;
+        border: 1px solid rgba(151,151,151,0.5);
+        border-radius: 3px;
+        padding: 10px;
+        &__image {
+          position: relative;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          width: 140px;
+          margin-top: 12px;
+            > img {
+                display: inline-block;
+                max-width: 100%;
+                max-height: 100%;
+                vertical-align: top;
+                max-width: 100%;
+                max-height: 100%;
+            }   
+        }
+        &__description {
+          margin-left: 20px;
+        }
+        &__name {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+        &__about {
+          font-size: 12px;
+          word-break: break-word;
+        }
+        &__price {
+          font-size: 20px;
+          font-weight: 700;
+          margin-top: 6px;
+        }
+
+        &__add-to-bag {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            cursor: pointer;
+            text-transform: uppercase;
+            height: 30px;
+            border-radius: 4px;
+            line-height: 28px;
+            color: white;
+            background: black;
+            padding: 0 15px;
+            font-size: 15px;
+            width: auto;
+            text-align: center;
+            font-weight: 600;
+            
+            &_is-active-false {
+              cursor: not-allowed;
+              background: gray;
+            }
+        }
+      }
+    }
+
+  .all-products {
+    color: black;
+    font-size: 12px;
+    margin-top: 8px;
+    margin-left: 6px;
+    &__button {
+      margin-left: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+  &__err {
+    color: red;
+    margin-left: 6px;
+  }
+}

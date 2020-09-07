@@ -1,0 +1,106 @@
+/** This is the main stylesheet for the sass compiler, all imports should stem from this initial page. It contains the universal styles of the site, the imports and various other items. */
+/** The menu is technically the header of the site, it contains the styles for the drop down of the Search Bar. */
+header.menu { width: 100%; position: relative; z-index: 10; }
+
+header.menu div.menu-container { width: 100%; background-color: black; padding: 0 20px; text-align: left; }
+
+header.menu div.menu-container div.menu-holder { position: relative; width: 100%; max-width: 1280px; margin: 0 auto; }
+
+header.menu div.menu-container h1 { font-family: Arial, Helvetica, sans-serif; font-size: 24px; line-height: 70px; color: white; text-align: left; display: inline-block; }
+
+header.menu div.menu-container nav { display: inline-block; margin-left: 60px; }
+
+header.menu div.menu-container nav i { color: white; font-size: 30px; line-height: 70px; }
+
+header.menu div.menu-container nav i.search { position: absolute; right: 10px; top: 0; }
+
+header.menu div.menu-container nav a.nav-item { font-family: Helvetica, Arial, Sans-Serif; font-size: 17px; line-height: 70px; text-transform: uppercase; text-decoration: none; white-space: nowrap; border-bottom: 1px solid transparent; color: #FFF; margin-right: 20px; }
+
+header.menu div.search-container { position: absolute; background-color: white; z-index: 20; -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); width: 100%; padding: 5px; border-bottom: 1px solid #CCC; display: none; }
+
+header.menu div.search-container.showing { display: block; }
+
+header.menu div.search-container input[type='text'] { min-width: 100%; font-size: 36px; line-height: 50px; border: 1px solid #CCC; padding: 0 10px; }
+
+header.menu div.search-container i.close { position: absolute; right: 18px; top: 13px; font-size: 36px; line-height: 50px; }
+
+/** This is the central home page */
+section#home { position: absolute; width: 100%; height: 100%; top: 0; left: 0; padding: 100px 20px 0; background-image: url("/img/header.jpg"); background-size: cover; background-repeat: no-repeat; }
+
+section#home div.content { max-width: 1280px; margin: 0 auto; color: #FFF; }
+
+.search-content { padding: 8px; }
+
+.search-content .previews-result { margin-top: 2px; }
+
+.search-content .previews-result .item-preview { display: -webkit-box; display: -ms-flexbox; display: flex; width: 50%; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; position: relative; border: 1px solid rgba(151, 151, 151, 0.5); border-radius: 3px; padding: 10px; }
+
+.search-content .previews-result .item-preview__image { position: relative; cursor: pointer; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 140px; margin-top: 12px; }
+
+.search-content .previews-result .item-preview__image > img { display: inline-block; max-width: 100%; max-height: 100%; vertical-align: top; max-width: 100%; max-height: 100%; }
+
+.search-content .previews-result .item-preview__description { margin-left: 20px; }
+
+.search-content .previews-result .item-preview__name { font-size: 18px; margin-bottom: 10px; }
+
+.search-content .previews-result .item-preview__about { font-size: 12px; word-break: break-word; }
+
+.search-content .previews-result .item-preview__price { font-size: 20px; font-weight: 700; margin-top: 6px; }
+
+.search-content .previews-result .item-preview__add-to-bag { position: absolute; right: 20px; bottom: 20px; cursor: pointer; text-transform: uppercase; height: 30px; border-radius: 4px; line-height: 28px; color: white; background: black; padding: 0 15px; font-size: 15px; width: auto; text-align: center; font-weight: 600; }
+
+.search-content .previews-result .item-preview__add-to-bag_is-active-false { cursor: not-allowed; background: gray; }
+
+.search-content .all-products { color: black; font-size: 12px; margin-top: 8px; margin-left: 6px; }
+
+.search-content .all-products__button { margin-left: 8px; font-weight: 600; font-size: 14px; text-transform: uppercase; cursor: pointer; }
+
+.search-content__err { color: red; margin-left: 6px; }
+
+.spinner { display: block; opacity: 1; position: relative; -webkit-transition: opacity .3s; transition: opacity .3s; padding: 0; margin: 0; }
+
+.spinner .spinner__inner { display: block; position: relative; width: 100%; height: 100%; }
+
+.spinner .spinner__dot { position: absolute; top: 50%; left: 50%; display: inline-block; width: 4px; height: 4px; margin-left: -10%; margin-top: -10%; border-radius: 50%; background-color: #fff; -webkit-animation: spinner 1.6s linear infinite; animation: spinner 1.6s linear infinite; }
+
+.spinner .spinner__dot:nth-child(1) { -webkit-animation-delay: 0s; animation-delay: 0s; top: 0; left: 50%; }
+
+.spinner .spinner__dot:nth-child(2) { -webkit-animation-delay: .2s; animation-delay: .2s; top: 15%; left: 85%; }
+
+.spinner .spinner__dot:nth-child(3) { -webkit-animation-delay: .4s; animation-delay: .4s; top: 50%; left: 100%; }
+
+.spinner .spinner__dot:nth-child(4) { -webkit-animation-delay: .6s; animation-delay: .6s; top: 85%; left: 85%; }
+
+.spinner .spinner__dot:nth-child(5) { -webkit-animation-delay: .8s; animation-delay: .8s; top: 100%; left: 50%; }
+
+.spinner .spinner__dot:nth-child(6) { -webkit-animation-delay: 1s; animation-delay: 1s; top: 85%; left: 15%; }
+
+.spinner .spinner__dot:nth-child(7) { -webkit-animation-delay: 1.2s; animation-delay: 1.2s; top: 50%; left: 0%; }
+
+.spinner .spinner__dot:nth-child(8) { -webkit-animation-delay: 1.4s; animation-delay: 1.4s; top: 15%; left: 15%; }
+
+.spinner--disabled { opacity: 0; width: 0 !important; height: 0 !important; }
+
+@-webkit-keyframes spinner { 0%, 25%, 75%, 100% { -webkit-transform: scale(1); transform: scale(1); }
+  50% { -webkit-transform: scale(1.4); transform: scale(1.4); } }
+
+@keyframes spinner { 0%, 25%, 75%, 100% { -webkit-transform: scale(1); transform: scale(1); }
+  50% { -webkit-transform: scale(1.4); transform: scale(1.4); } }
+
+html, html * { -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0; margin: 0; }
+
+html, body { width: 100%; height: 100%; }
+
+main { width: 100%; height: 100%; display: block; position: relative; }
+
+main * { -webkit-font-smoothing: antialiased; }
+
+main a { -webkit-transition: opacity .5s; transition: opacity .5s; }
+
+main a:hover { opacity: 0.7; }
+
+main a:visited { color: inherit; }
+
+main div.inner { width: 100%; height: auto; background-color: #960000; }
+
+/*# sourceMappingURL=main.css.map */
