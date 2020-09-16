@@ -20,10 +20,11 @@ export default function ProductList(props) {
               <div className="item-preview__about">{productItem.about}</div>
               <div className="item-preview__price">${productItem.price}</div>
               <div className="item-preview__tags">{getTags(productItem.tags)}</div>
-              <a onClick={(e)=> e.preventDefault()} 
+              <button 
+                onClick={(e)=> e.preventDefault()} 
                 className={`item-preview__add-to-bag item-preview__add-to-bag_is-active-${productItem.isActive}`}>
                 Add
-              </a>
+              </button>
             </div>
           </div>
         ))}
