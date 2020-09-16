@@ -49,15 +49,7 @@ export default function SearchContent(props) {
           ))}
       </div>
         :
-      <Spinner
-          color='black'
-          style={{ 
-              width: '30px',
-              height: '30px',
-              position: 'relative',
-              top: '10px'
-          }}
-      />
+      <Spinner color='black' isDefault={true} />
       }
       { products.length > 2 ?
         <div className="search-content__all-products all-products">
