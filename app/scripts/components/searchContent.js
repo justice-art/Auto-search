@@ -33,7 +33,6 @@ export default function SearchContent(props) {
               <div className="item-preview__image">
                 <img
                   src={productItem.picture}
-                  style={{ width: '100%' }}
                 />
               </div>
               <div className="item-preview__description">
