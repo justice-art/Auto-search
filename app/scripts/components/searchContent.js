@@ -8,17 +8,17 @@ export default function SearchContent(props) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  useEffect( () => {
-    setPresentedProducts(products.slice(0, 2)) 
-  }, [products])
-
-  function showAllProducts() {
+  const showAllProducts = () => {
     setPresentedProducts(products)
   }
 
   const getTags = (arrayWithTags) => {
     return arrayWithTags.join(', ');
   }
+
+  useEffect( () => {
+    setPresentedProducts(products.slice(0, 2)) 
+  }, [products])
 
   return (
     <div className="search-content">

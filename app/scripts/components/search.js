@@ -8,17 +8,7 @@ export default function Search(props) {
   const [term, setTerm] = useState('');
   const debouncedTerm = useDebounce(term, 400);
 
-  useEffect( () => {
-      if (debouncedTerm) {
-        getProductsByTerm()
-      } else {
-        setProducts([]);
-      }
-    },
-    [debouncedTerm] 
-  );
-
-  async function getProductsByTerm() {
+  const getProductsByTerm = async () => {
     setError('');
     setLoading(true);
     try {
@@ -30,6 +20,14 @@ export default function Search(props) {
     }
     setLoading(false);
   }
+
+  useEffect( () => {
+    if (debouncedTerm) {
+      getProductsByTerm()
+    } else {
+      setProducts([]);
+    }
+  }, [debouncedTerm]);
 
   return (
     <input type="text" onChange={e => setTerm(e.target.value)} />
