@@ -15,7 +15,7 @@ module.exports = {
     }
 
     function isExistByTagName(tags) {
-      const filteredTags = tags.filter(tag => {
+        const filteredTags = tags.filter(tag => {
         const lowerCaseTagName = tag.toLowerCase();
         return lowerCaseTagName.indexOf(str) !== -1;
       })
