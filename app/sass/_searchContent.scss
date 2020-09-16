@@ -41,7 +41,11 @@
         &__price {
           font-size: 20px;
           font-weight: 700;
-          margin-top: 6px;
+          margin: 10px 0;
+        }
+        &__tags {
+          font-size: 14px;
+          text-transform: uppercase;
         }
 
         &__add-to-bag {

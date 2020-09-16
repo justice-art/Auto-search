@@ -16,6 +16,10 @@ export default function SearchContent(props) {
     setPresentedProducts(products)
   }
 
+  const getTags = (arrayWithTags) => {
+    return arrayWithTags.join(', ');
+  }
+
   return (
     <div className="search-content">
       <Search setProducts={setProducts} setLoading={setLoading} setError={setError} />
@@ -36,6 +40,7 @@ export default function SearchContent(props) {
                 <h4 className="item-preview__name">{productItem.name}</h4>
                 <div className="item-preview__about">{productItem.about}</div>
                 <div className="item-preview__price">${productItem.price}</div>
+                <div className="item-preview__tags">{getTags(productItem.tags)}</div>
                 <a onClick={(e)=> e.preventDefault()} 
                    className={`item-preview__add-to-bag item-preview__add-to-bag_is-active-${productItem.isActive}`}>
                   Add
