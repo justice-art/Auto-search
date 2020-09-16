@@ -25,16 +25,18 @@ export default function SearchContent(props) {
       </a>
       { !loading ? <ProductList products={presentedProducts} /> : <Spinner color='black' isDefault={true} /> }
       { products.length > 2 &&
-        <div className="search-content__all-products all-products">
-          <span className="all-products__title">
+        <div className="search-see-results">
+          <span className="title">
             {`Displaying ${presentedProducts.length} of ${products.length} results`}
           </span>
-          {presentedProducts.length !== products.length && <a className="all-products__button" onClick={showAllProducts}>Display all results</a>}
+          {presentedProducts.length !== products.length && 
+            <button className="show-all-button" onClick={showAllProducts}>Display all results</button>
+          }
         </div>
        }
       { error && 
-        <div className="search-content__err">
-          {error}
+        <div className="search-content-error">
+          <span>{error}</span>
         </div>
       }
     </div>

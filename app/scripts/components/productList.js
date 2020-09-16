@@ -7,22 +7,24 @@ export default function ProductList(props) {
   }
   
   return (
-    <div className="previews-result">
+    <div className="product-list-container">
       {props.products.map(productItem => (
           <div key={productItem._id} className="item-preview">
-            <div className="item-preview__image">
-              <img
-                src={productItem.picture}
-              />
+            <div className="image-wrapper">
+              <img src={productItem.picture} />
             </div>
-            <div className="item-preview__description">
-              <h4 className="item-preview__name">{productItem.name}</h4>
-              <div className="item-preview__about">{productItem.about}</div>
-              <div className="item-preview__price">${productItem.price}</div>
-              <div className="item-preview__tags">{getTags(productItem.tags)}</div>
+            <div className="product-description">
+              <h4 className="name">{productItem.name}</h4>
+              <p className="about">{productItem.about}</p>
+              <div className="price">
+                <span>${productItem.price}</span>
+              </div>
+              <div className="tags">
+                <span>{getTags(productItem.tags)}</span>
+              </div>
               <button 
                 onClick={(e)=> e.preventDefault()} 
-                className={`item-preview__add-to-bag item-preview__add-to-bag_is-active-${productItem.isActive}`}>
+                className={`add-to-bag-button add-to-bag-button_is-active-${productItem.isActive}`}>
                 Add
               </button>
             </div>
