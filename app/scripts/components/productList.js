@@ -1,4 +1,5 @@
 import React from 'react'
+import { LABELS } from '../services/constants'
 
 export default function ProductList(props) {
 
@@ -25,7 +26,7 @@ export default function ProductList(props) {
               <button 
                 onClick={(e)=> e.preventDefault()} 
                 className={`add-to-bag-button ${productItem.isActive === 'true' ? 'active' : 'inactive'}`}>
-                Add
+                {LABELS.addToBagButton}
               </button>
             </div>
           </div>

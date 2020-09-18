@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Search from './search'
 import Spinner from './spinner'
 import ProductList from './productList'
+import { LABELS, LIMIT_OF_PRODUCTS as limitOfProducts } from '../services/constants'
 
 export default function SearchContent(props) {
   const [products, setProducts] = useState([]);
@@ -14,7 +15,7 @@ export default function SearchContent(props) {
   }
 
   useEffect( () => {
-    setPresentedProducts(products.slice(0, 2)) 
+    setPresentedProducts(products.slice(0, limitOfProducts)) 
   }, [products])
 
   return (
@@ -24,13 +25,13 @@ export default function SearchContent(props) {
           <i className="material-icons close">close</i>
       </a>
       { !loading ? <ProductList products={presentedProducts} /> : <Spinner color='black' isDefault={true} /> }
-      { products.length > 2 &&
+      { products.length > limitOfProducts &&
         <div className="search-see-results">
           <span className="title">
             {`Displaying ${presentedProducts.length} of ${products.length} results`}
           </span>
           {presentedProducts.length !== products.length && 
-            <button className="show-all-button" onClick={showAllProducts}>Display all results</button>
+            <button className="show-all-button" onClick={showAllProducts}>{LABELS.showAllButton}</button>
           }
         </div>
        }
