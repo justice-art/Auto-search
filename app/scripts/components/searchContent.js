@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import Search from './search'
-import Spinner from './spinner'
+import Loader from 'react-loader-spinner'
 import ProductList from './productList'
 import { LABELS, LIMIT_OF_PRODUCTS as limitOfProducts } from '../services/constants'
 
@@ -24,7 +24,14 @@ export default function SearchContent(props) {
       <a href="#" onClick={(e) => props.toggleSearch(e)}>
           <i className="material-icons close">close</i>
       </a>
-      { !loading ? <ProductList products={presentedProducts} /> : <Spinner color='black' isDefault={true} /> }
+      { !loading ? 
+        <ProductList products={presentedProducts} /> : 
+        <Loader
+          type="TailSpin"
+          color="#343434"
+          height={50}
+          width={50}
+        /> }
       { products.length > limitOfProducts &&
         <div className="search-see-results">
           <span className="title">

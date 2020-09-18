@@ -8,6 +8,7 @@
     "url": ""
   },
   "dependencies": {
+    "react-loader-spinner": "^3.1.14",
     "regenerator-runtime": "^0.13.7"
   },
   "scripts": {
