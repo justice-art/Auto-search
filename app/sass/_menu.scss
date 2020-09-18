@@ -72,8 +72,7 @@ header.menu {
         width: 100%;
         padding: 5px;
         border-bottom: 1px solid #CCC;
-        display: none;
-        &.showing { display: block; }
+        display: block;
         
         input[type='text'] {
             min-width: 100%;

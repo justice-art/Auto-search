@@ -38,9 +38,11 @@ export default class Menu extends React.Component {
                         </nav>
                     </div>
                 </div>
-                <div className={(this.state.showingSearch ? "showing " : "") + "search-container"}>
-                    <SearchContent toggleSearch = {this.toggleSearch.bind(this)}/>
-                </div>
+                {this.state.showingSearch && 
+                    <div className="search-container">
+                        <SearchContent toggleSearch={(e) => this.toggleSearch(e)}/>
+                    </div>
+                }
             </header>
         );
     }
