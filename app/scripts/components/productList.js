@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function ProductList(props) {
 
-  const getTags = (arrayWithTags) => {
-    return arrayWithTags.join(', ');
+  const getTags = (tags) => {
+    return tags.join(', ');
   }
   
   return (
