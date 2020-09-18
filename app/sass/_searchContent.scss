@@ -71,8 +71,8 @@
               width: auto;
               text-align: center;
               font-weight: 600;
-              
-              &_is-active-false {
+
+              &.inactive { 
                 cursor: not-allowed;
                 background: gray;
               }

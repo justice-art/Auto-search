@@ -24,7 +24,7 @@ export default function ProductList(props) {
               </div>
               <button 
                 onClick={(e)=> e.preventDefault()} 
-                className={`add-to-bag-button add-to-bag-button_is-active-${productItem.isActive}`}>
+                className={`add-to-bag-button ${productItem.isActive === 'true' ? 'active' : 'inactive'}`}>
                 Add
               </button>
             </div>
