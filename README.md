@@ -30,8 +30,3 @@ On Windows systems, you may get an error like the following:
 If so, you will need to replace any occurrences of NODE_ENV with 'SET NODE_ENV' in the package.json, and separate this command from the one that follows it with a '&', like this:
   "node-server": "SET NODE_ENV=development & nodemon server/app.js"
   
-
-## Additional Notes
-
-* That is test task.
-* This task was developing for ELC company.
